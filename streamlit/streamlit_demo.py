@@ -9,6 +9,15 @@ from xgboost import XGBRegressor
 import pickle
 import os
 
+
+# DEBUG: Show what files Streamlit Cloud sees
+st.write("### 🔍 Debug Info")
+st.write("Current directory:", os.getcwd())
+st.write("Files in directory:", os.listdir('.'))
+pkl_files = [f for f in os.listdir('.') if f.endswith('.pkl')]
+st.write(f"Found {len(pkl_files)} .pkl files:", pkl_files)
+st.write("---")
+
 # Set page config
 st.set_page_config(
     page_title="Pesticide & Respiratory Health ML Demo",
