@@ -1,5 +1,4 @@
-# Project Title
-AI4ALL Environmental Epidemiology: Linking Agricultural Pesticide Use to Respiratory Health Outcomes in California (2000–2023)
+# AI4ALL Environmental Epidemiology: Linking Agricultural Pesticide Use to Respiratory Health Outcomes in California (2000–2023)
 
 This project investigates whether long-term pesticide exposure contributes to increased COPD (Chronic Obstructive Pulmonary Disease) rates across California counties. We built a full data-engineering and machine-learning pipeline to process pesticide use, demographic confounders, and respiratory hospitalization data. This work was completed as part of the AI4ALL Ignite program, applying epidemiology, machine learning, environmental justice analysis, and responsible AI principles to understand how agricultural practices affect community health.
 
