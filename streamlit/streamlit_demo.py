@@ -19,10 +19,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS - Premium design inspired by Apple and Dia
+# Custom CSS - Matching presentation design
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
     
     /* Global styles */
     * {
@@ -32,7 +32,7 @@ st.markdown("""
     /* Main container */
     .main {
         padding: 0rem 2rem;
-        background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+        background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
     }
     
     .block-container {
@@ -41,84 +41,85 @@ st.markdown("""
         max-width: 1200px;
     }
     
-    /* Headers */
+    /* Headers - Bold blue style matching slides */
     h1 {
-        font-weight: 700;
-        font-size: 3rem !important;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        padding-bottom: 1.5rem;
-        letter-spacing: -0.02em;
+        font-weight: 900 !important;
+        font-size: 3.5rem !important;
+        color: #0033FF !important;
+        padding-bottom: 1rem;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
     }
     
     h2 {
-        font-weight: 600;
-        font-size: 1.8rem !important;
-        color: #1a202c;
+        font-weight: 800 !important;
+        font-size: 2rem !important;
+        color: #0033FF !important;
         padding-top: 2rem;
         padding-bottom: 1rem;
-        letter-spacing: -0.01em;
+        letter-spacing: -0.02em;
     }
     
     h3 {
-        font-weight: 600;
-        font-size: 1.3rem !important;
-        color: #2d3748;
+        font-weight: 700 !important;
+        font-size: 1.4rem !important;
+        color: #0044CC !important;
         letter-spacing: -0.01em;
     }
     
-    /* Metrics - Glass morphism effect */
+    /* Metrics - Blue and yellow-green accent */
     .stMetric {
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         padding: 1.5rem;
         border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid #E6F0FF;
+        box-shadow: 0 8px 32px 0 rgba(0, 51, 255, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     }
     
     .stMetric:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+        box-shadow: 0 12px 40px 0 rgba(0, 51, 255, 0.15);
+        border-color: #CCFF00;
     }
     
     .stMetric label {
         font-size: 0.875rem !important;
-        font-weight: 500 !important;
-        color: #718096 !important;
+        font-weight: 600 !important;
+        color: #5577CC !important;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.08em;
     }
     
     .stMetric [data-testid="stMetricValue"] {
-        font-size: 2rem !important;
-        font-weight: 700 !important;
-        color: #1a202c !important;
+        font-size: 2.2rem !important;
+        font-weight: 800 !important;
+        color: #0033FF !important;
     }
     
-    /* Buttons - Modern gradient with hover effect */
+    /* Buttons - Blue with yellow-green hover */
     .stButton>button {
         width: 100%;
         height: 3.5rem;
         border-radius: 12px;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 1.1rem;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #0033FF;
         border: none;
         color: white;
-        box-shadow: 0 4px 15px 0 rgba(102, 126, 234, 0.4);
+        box-shadow: 0 4px 20px 0 rgba(0, 51, 255, 0.3);
         transition: all 0.3s ease;
         letter-spacing: 0.02em;
+        text-transform: uppercase;
     }
     
     .stButton>button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 25px 0 rgba(102, 126, 234, 0.6);
-        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        box-shadow: 0 6px 30px 0 rgba(0, 51, 255, 0.5);
+        background: #0044DD;
+        border: 2px solid #CCFF00;
     }
     
     .stButton>button:active {
@@ -128,62 +129,72 @@ st.markdown("""
     /* Alerts and info boxes */
     .stAlert {
         border-radius: 12px;
-        border-left: 4px solid #667eea;
-        background: rgba(102, 126, 234, 0.05);
+        border-left: 4px solid #CCFF00;
+        background: rgba(204, 255, 0, 0.08);
         backdrop-filter: blur(10px);
         padding: 1rem 1.5rem;
+        color: #1a1a1a;
     }
     
     /* Input fields */
     .stNumberInput>div>div>input,
     .stSlider>div>div>div>input {
         border-radius: 8px;
-        border: 1.5px solid #e2e8f0;
+        border: 2px solid #D6E4FF;
         transition: border-color 0.3s ease;
         font-weight: 500;
     }
     
     .stNumberInput>div>div>input:focus,
     .stSlider>div>div>div>input:focus {
-        border-color: #667eea;
-        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        border-color: #0033FF;
+        box-shadow: 0 0 0 3px rgba(0, 51, 255, 0.1);
     }
     
-    /* Sidebar */
+    /* Sidebar - Dark blue matching slides */
     [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1a202c 0%, #2d3748 100%);
+        background: linear-gradient(180deg, #001A4D 0%, #003380 100%);
         padding-top: 2rem;
     }
     
     [data-testid="stSidebar"] .stMetric {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(204, 255, 0, 0.1);
+        border: 2px solid rgba(204, 255, 0, 0.3);
+    }
+    
+    [data-testid="stSidebar"] .stMetric:hover {
+        background: rgba(204, 255, 0, 0.15);
+        border-color: #CCFF00;
     }
     
     [data-testid="stSidebar"] .stMetric label {
-        color: #a0aec0 !important;
+        color: #CCFF00 !important;
+        font-weight: 700 !important;
     }
     
     [data-testid="stSidebar"] .stMetric [data-testid="stMetricValue"] {
-        color: #ffffff !important;
+        color: #FFFFFF !important;
+        font-weight: 800 !important;
     }
     
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3 {
-        color: #ffffff;
+        color: #FFFFFF;
+        font-weight: 800 !important;
     }
     
     [data-testid="stSidebar"] .stMarkdown {
-        color: #e2e8f0;
+        color: #E6F0FF;
     }
     
     /* Selectbox */
     .stSelectbox>div>div {
         border-radius: 12px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(204, 255, 0, 0.3);
+        background: rgba(0, 26, 77, 0.3);
         backdrop-filter: blur(10px);
+        font-weight: 600;
     }
     
     /* Dataframes */
@@ -191,30 +202,30 @@ st.markdown("""
         border-radius: 12px;
         overflow: hidden;
         border: none !important;
-        box-shadow: 0 4px 20px 0 rgba(31, 38, 135, 0.1);
+        box-shadow: 0 4px 20px 0 rgba(0, 51, 255, 0.1);
     }
     
-    /* Expanders */
+    /* Expanders - Blue theme */
     .streamlit-expanderHeader {
-        background: rgba(102, 126, 234, 0.05);
+        background: rgba(0, 51, 255, 0.05);
         border-radius: 12px;
-        font-weight: 600;
-        color: #1a202c;
-        border: 1px solid rgba(102, 126, 234, 0.1);
+        font-weight: 700;
+        color: #0033FF;
+        border: 2px solid rgba(0, 51, 255, 0.1);
         transition: all 0.3s ease;
     }
     
     .streamlit-expanderHeader:hover {
-        background: rgba(102, 126, 234, 0.1);
-        border-color: rgba(102, 126, 234, 0.2);
+        background: rgba(0, 51, 255, 0.1);
+        border-color: #CCFF00;
     }
     
     /* Horizontal rule */
     hr {
         margin: 2.5rem 0;
         border: none;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #CCFF00, transparent);
     }
     
     /* Columns */
@@ -230,55 +241,74 @@ st.markdown("""
     .stTabs [data-baseweb="tab"] {
         border-radius: 8px;
         padding: 0.5rem 1.5rem;
-        font-weight: 600;
+        font-weight: 700;
+        background: #E6F0FF;
+        color: #0033FF;
+    }
+    
+    .stTabs [data-baseweb="tab"][aria-selected="true"] {
+        background: #0033FF;
+        color: #CCFF00;
     }
     
     /* Slider */
     .stSlider [data-testid="stTickBar"] {
-        background: linear-gradient(90deg, #667eea, #764ba2);
+        background: linear-gradient(90deg, #0033FF, #CCFF00);
         height: 4px;
         border-radius: 2px;
     }
     
     /* Code blocks */
     code {
-        background: rgba(102, 126, 234, 0.08);
+        background: rgba(0, 51, 255, 0.08);
         padding: 0.2rem 0.5rem;
         border-radius: 6px;
         font-family: 'SF Mono', Monaco, monospace;
         font-size: 0.9em;
-        font-weight: 500;
-        color: #667eea;
+        font-weight: 600;
+        color: #0033FF;
     }
     
     /* Scrollbar customization */
     ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
     }
     
     ::-webkit-scrollbar-track {
-        background: #f1f1f1;
+        background: #f1f5ff;
         border-radius: 10px;
     }
     
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(180deg, #0033FF, #0055FF);
         border-radius: 10px;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(135deg, #764ba2, #667eea);
+        background: linear-gradient(180deg, #CCFF00, #AADD00);
     }
     
     /* Tooltips */
     [data-testid="stTooltipIcon"] {
-        color: #667eea;
+        color: #CCFF00;
     }
     
     /* Footer styling */
     footer {
         visibility: hidden;
+    }
+    
+    /* Subheaders in input sections */
+    .element-container h3 {
+        font-weight: 800 !important;
+        color: #0033FF !important;
+    }
+    
+    /* Info text styling */
+    p {
+        color: #333333;
+        line-height: 1.6;
     }
     
     /* Animations */
@@ -290,13 +320,19 @@ st.markdown("""
     .element-container {
         animation: fadeIn 0.5s ease-out;
     }
+    
+    /* Accent elements */
+    .stMarkdown strong {
+        color: #0033FF;
+        font-weight: 700;
+    }
     </style>
     """, unsafe_allow_html=True)
 
 # Header
 st.title("🌾 Pesticide & COPD Analysis")
 st.markdown("""
-    <p style='font-size: 1.2rem; color: #718096; font-weight: 400; margin-top: -1rem; margin-bottom: 2rem;'>
+    <p style='font-size: 1.2rem; color: #5577CC; font-weight: 500; margin-top: -1rem; margin-bottom: 2rem;'>
     Machine learning models predicting respiratory health outcomes based on agricultural pesticide exposure across California counties.
     </p>
     """, unsafe_allow_html=True)
@@ -617,7 +653,7 @@ feature_inputs = {
 st.markdown("<br>", unsafe_allow_html=True)
 st.header("📊 Input Features")
 st.markdown(f"""
-    <p style='color: #4a5568; font-size: 1rem; margin-bottom: 1.5rem;'>
+    <p style='color: #0033FF; font-size: 1rem; margin-bottom: 1.5rem; font-weight: 600;'>
     <strong>{model_choice}</strong> uses <strong>{len(selected_features)} features</strong>. 
     Adjust the values below to generate a prediction.
     </p>
@@ -1024,15 +1060,14 @@ with st.expander("ℹ️ About This Project"):
 st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown(
     """
-    <div style='text-align: center; padding: 2rem 0; color: #718096; font-size: 0.95rem; 
-                border-top: 1px solid rgba(102, 126, 234, 0.1); margin-top: 3rem;'>
+    <div style='text-align: center; padding: 2rem 0; color: #5577CC; font-size: 0.95rem; 
+                border-top: 2px solid #CCFF00; margin-top: 3rem;'>
         <div style='margin-bottom: 0.5rem;'>
-            <span style='font-weight: 600; background: linear-gradient(135deg, #667eea, #764ba2); 
-                         -webkit-background-clip: text; -webkit-text-fill-color: transparent;'>
+            <span style='font-weight: 800; color: #0033FF; font-size: 1.1rem;'>
                 🌾 AI4ALL Ignite Program
             </span>
         </div>
-        <div style='font-size: 0.875rem; color: #a0aec0;'>
+        <div style='font-size: 0.875rem; color: #6688BB; font-weight: 600;'>
             Data Science for Public Health · 2024
         </div>
     </div>
