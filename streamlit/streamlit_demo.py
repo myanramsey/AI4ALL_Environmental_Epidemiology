@@ -17,15 +17,6 @@ else:
     # We're in streamlit folder already
     MODEL_DIR = ''
 
-st.write(f"Looking for models in: {MODEL_DIR or 'current directory'}")
-
-# DEBUG: Show what files Streamlit Cloud sees
-st.write("### 🔍 Debug Info")
-st.write("Current directory:", os.getcwd())
-st.write("Files in directory:", os.listdir('.'))
-pkl_files = [f for f in os.listdir('.') if f.endswith('.pkl')]
-st.write(f"Found {len(pkl_files)} .pkl files:", pkl_files)
-st.write("---")
 
 # Set page config
 st.set_page_config(
