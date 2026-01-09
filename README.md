@@ -4,7 +4,7 @@
 This project investigates whether long-term pesticide exposure contributes to increased COPD (Chronic Obstructive Pulmonary Disease) rates across California counties. We built a full data-engineering and machine-learning pipeline to process pesticide use, demographic confounders, and respiratory hospitalization data. This work was completed as part of the AI4ALL Ignite program, applying epidemiology, machine learning, environmental justice analysis, and responsible AI principles to understand how agricultural practices affect community health.
 
 [<kbd>TEST OUT OUR MODEL ON STREAMLIT</kbd>](https://ai4allenvironmentalepidemiology.streamlit.app/)
-
+---
 ---<img width="648" height="864" alt="AI4ALL Poster" src="https://github.com/user-attachments/assets/3301ee8f-c8b3-40c6-a060-479a4b92104f" />
 
 
