@@ -5,7 +5,8 @@ This project investigates whether long-term pesticide exposure contributes to in
 
 [<kbd>TEST OUT OUR MODEL ON STREAMLIT</kbd>](https://ai4allenvironmentalepidemiology.streamlit.app/)
 
----
+---<img width="648" height="864" alt="AI4ALL Poster" src="https://github.com/user-attachments/assets/3301ee8f-c8b3-40c6-a060-479a4b92104f" />
+
 
 # Problem Statement
 California is the agricultural engine of the United States, producing most of the nation’s fruits, nuts, and vegetables. However, this productivity relies heavily on pesticide use, which threatens environmental and public health—especially in rural and farmworking communities.
